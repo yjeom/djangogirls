@@ -5,7 +5,12 @@
     <title>Yeji's blog</title>
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    {% for post in posts %}
+        <div>
+            <h1><a herf ="">{{ post.title }}</a></h1>
+            <p> published : {{ post.published_date }}</p>
+            <p>{{ post.text |linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
